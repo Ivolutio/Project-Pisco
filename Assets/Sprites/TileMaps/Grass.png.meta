@@ -1,18 +1,18 @@
 fileFormatVersion: 2
 guid: 19f6c82e0fe46ff44a7649422092f500
-timeCreated: 1485542919
+timeCreated: 1485543970
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Grass_0
-    21300002: Grass_1
-    21300004: Grass_2
+    21300002: Grass2_3
+    21300004: Grass3_3
     21300006: Grass_3
-    21300008: Grass_4
-    21300010: Grass_5
-    21300012: Grass_6
-    21300014: Grass_7
-    21300016: Grass_8
+    21300008: Grass2_2
+    21300010: Grass3_2
+    21300012: Grass1_1
+    21300014: Grass2_1
+    21300016: Grass3_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -75,6 +75,22 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -87,12 +103,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_1
+      name: Grass2_3
       rect:
         serializedVersion: 2
         x: 32
@@ -100,12 +116,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_2
+      name: Grass3_3
       rect:
         serializedVersion: 2
         x: 64
@@ -113,7 +129,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -126,12 +142,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_4
+      name: Grass2_2
       rect:
         serializedVersion: 2
         x: 32
@@ -139,12 +155,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_5
+      name: Grass3_2
       rect:
         serializedVersion: 2
         x: 64
@@ -152,12 +168,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_6
+      name: Grass1_1
       rect:
         serializedVersion: 2
         x: 0
@@ -165,12 +181,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_7
+      name: Grass2_1
       rect:
         serializedVersion: 2
         x: 32
@@ -178,12 +194,12 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Grass_8
+      name: Grass3_1
       rect:
         serializedVersion: 2
         x: 64
@@ -191,7 +207,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
