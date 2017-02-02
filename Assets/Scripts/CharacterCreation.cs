@@ -50,8 +50,8 @@ public class CharacterCreation : MonoBehaviour
                     currHead = 0;
                 else
                     currHead += 1;
-
-                head.sprite = heads[(int)currHead].sprites[1];
+                Debug.Log("headnr: " + heads[(int)currHead].front);
+                head.sprite = heads[(int)currHead].sprites[heads[(int)currHead].front];
                 canvas.transform.FindChild("Head Text").GetComponent<Text>().text = "Head (" + (currHead + 1) + "/" + heads.Count + ")";
             }
             else if (part == 1)
@@ -60,8 +60,8 @@ public class CharacterCreation : MonoBehaviour
                     currBody = 0;
                 else
                     currBody += 1;
-
-                body.sprite = bodies[(int)currBody].sprites[1];
+                Debug.Log("bodynr: " + bodies[(int)currBody].front);
+                body.sprite = bodies[(int)currBody].sprites[bodies[(int)currBody].front];
                 canvas.transform.FindChild("Body Text").GetComponent<Text>().text = "Body (" + (currBody + 1) + "/" + bodies.Count + ")";
             }
             else if (part == 2)
@@ -70,8 +70,8 @@ public class CharacterCreation : MonoBehaviour
                     currTopping = 0;
                 else
                     currTopping += 1;
-
-                topping.sprite = toppings[(int)currTopping].sprites[1];
+                Debug.Log("toppingsnr: " + toppings[(int)currTopping].front);
+                topping.sprite = toppings[(int)currTopping].sprites[toppings[(int)currTopping].front];
                 canvas.transform.FindChild("Topping Text").GetComponent<Text>().text = "Topping (" + (currTopping + 1) + "/" + toppings.Count + ")";
             }
             else if (part == 3)
@@ -80,8 +80,8 @@ public class CharacterCreation : MonoBehaviour
                     currExtra = 0;
                 else
                     currExtra += 1;
-
-                extra.sprite = extras[(int)currExtra].sprites[1];
+                Debug.Log("extranr: " + extras[(int)currExtra].front);
+                extra.sprite = extras[(int)currExtra].sprites[extras[(int)currExtra].front];
                 canvas.transform.FindChild("Extra Text").GetComponent<Text>().text = "Extra (" + (currExtra + 1) + "/" + extras.Count + ")";
             }
         }
@@ -179,7 +179,8 @@ public class CharacterCreation : MonoBehaviour
                     heads.Add(new CharacterSprite
                     {
                         name = jsonData["texture"].ToString(),
-                        sprites = quickList
+                        sprites = quickList,
+                        front = (int)jsonData["frontTexture"]
                     });
                     //Debug.Log("Chose head for " + jsonData["texture"].ToString());
                 }
@@ -188,24 +189,48 @@ public class CharacterCreation : MonoBehaviour
                     bodies.Add(new CharacterSprite
                     {
                         name = jsonData["texture"].ToString(),
-                        sprites = quickList
+                        sprites = quickList,
+                        front = (int)jsonData["frontTexture"]
                     });
                 //Topping
                 else if ((int)jsonData["part"] == 2)
                     toppings.Add(new CharacterSprite
                     {
                         name = jsonData["texture"].ToString(),
-                        sprites = quickList
+                        sprites = quickList,
+                        front = (int)jsonData["frontTexture"]
                     });
                 //Extra
                 else if ((int)jsonData["part"] == 3)
+                {
                     extras.Add(new CharacterSprite
                     {
                         name = jsonData["texture"].ToString(),
-                        sprites = quickList
+                        sprites = quickList,
+                        front = (int)jsonData["frontTexture"]
                     });
+                }
             }
         }
+    }
+
+    static public bool JsonDataContainsKey(JsonData data, string key)
+    {
+        bool result = false;
+        if (data == null)
+            return result;
+        if (!data.IsObject)
+        {
+            return result;
+        }
+        IDictionary tdictionary = data as IDictionary;
+        if (tdictionary == null)
+            return result;
+        if (tdictionary.Contains(key))
+        {
+            result = true;
+        }
+        return result;
     }
 
     // Half-Loader for Sprites
@@ -302,4 +327,8 @@ public class CharacterSprite
 {
     public string name;
     public List<Sprite> sprites;
+    public int front;
+    public int left;
+    public int right;
+    public int back;
 }
